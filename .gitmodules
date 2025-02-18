@@ -1,0 +1,9 @@
+[submodule "DiscordRichPresence-"]
+	path = DiscordRichPresence-
+	url = https://github.com/Classic1338/DiscordRichPresence-
+[submodule "discord-rpc"]
+	path = discord-rpc
+	url = https://github.com/discord/discord-rpc
+[submodule "Detours"]
+	path = Detours
+	url = https://github.com/microsoft/Detours
