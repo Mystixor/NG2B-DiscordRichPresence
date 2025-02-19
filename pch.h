@@ -12,6 +12,7 @@
 
 #include <string>
 #include <format>
+#include <mutex>
 #include "time.h"
 
 #include "Detours.h"
