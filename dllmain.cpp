@@ -270,10 +270,12 @@ void HackThread(HMODULE hModule)
 	g_moduleBase = (uintptr_t)GetModuleHandle(L"gamemodule.dll");
 
 #ifdef v1070
+	bool isSteamVersion = *(uint32_t*)(g_moduleBase + 0x188) == 0x67A33A6E;
+
 	LoadTDP4STY = (LOADTDP4STY_t)(g_moduleBase + 0x1763700);
-	uint32_t* p_Karma = (uint32_t*)(g_moduleBase + 0x36257f0);
-	uint32_t* p_KarmaPartner = (uint32_t*)(g_moduleBase + 0x3625b30);	//	In Tag Missions, your and your partner's karma are tracked separately
-	bool* p_IsInGame = (bool*)(g_moduleBase + 0x222ee9c);				//	This is more of game state Id, but it seems to be zero only in the main menu so this works
+	uint32_t* p_Karma = (uint32_t*)(g_moduleBase + (isSteamVersion ? 0x36257f0 : 0x34257b0));
+	uint32_t* p_KarmaPartner = (uint32_t*)(g_moduleBase + (isSteamVersion ? 0x3625b30 : 0x3425af0));	//	In Tag Missions, your and your partner's karma are tracked separately
+	bool* p_IsInGame = (bool*)(g_moduleBase + (isSteamVersion ? 0x222ee9c : 0x222ed3c));				//	This is more of game state Id, but it seems to be zero only in the main menu so this works
 #endif
 
 	//	Detour LoadTDP4STY
