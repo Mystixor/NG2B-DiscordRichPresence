@@ -6,7 +6,7 @@ The author of this repository has no affiliation with Team Ninja or Koei Tecmo a
 
 # Usage
 1. Install the Mod Loader for NG2B. The latest releases can be found on [GitHub](https://github.com/Mystixor/NGModLoader) as well as [Nexus Mods](https://www.nexusmods.com/ninjagaiden2black/mods/18).
-2. Put `NG2BRichPresence.dll` in the folder `NINJAGAIDEN2BLACK\Binaries\Win64\mods\bin\`.
+2. Put `NG2BRichPresence.dll` in the folder `NINJAGAIDEN2BLACK\Binaries\Win64\mods\bin\`. If you are on the Gamepass version of the game, replace `Win64` with `WinGDK`.
 3. Success! The mod will now automatically work when you play the game and have Discord open on your PC.
 
 This mod can also be found on [Nexus Mods](https://www.nexusmods.com/ninjagaiden2black/mods/88), including images previewing this mod.
